@@ -55,6 +55,7 @@ class User(Base):
         String(80),
         nullable=True,
         comment="展示昵称",
+        default="阳光开朗的鸟",
     )
 
     avatar_url: Mapped[str | None] = mapped_column(
