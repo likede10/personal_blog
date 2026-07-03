@@ -1,8 +1,14 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
+
+
+
+# router
+from router.login import router_login
 app = FastAPI()
 
+app.include_router(router_login)
 
 origins = [
     "http://localhost:5173"
